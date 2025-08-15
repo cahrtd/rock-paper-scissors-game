@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9f0;
+}
+
+.container {
+    padding: 4.5rem 14rem;
+    border-radius: 14px;
+    background-color: #fef3e1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result_images {
+    display: flex;
+    column-gap: 10rem;
+}
+
+.container.start .user_result {
+    transform-origin: left;
+    animation: userShake 0.9s ease infinite;
+}
+
+@keyframes userShake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.container.start .comp_result {
+    transform-origin: right;
+    animation: compShake 0.9s ease infinite;
+}
+@keyframes compShake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.result_images img {
+    width: 150px;
+}
+
+.user_result img {
+    transform: rotate(90deg);
+}
+
+.comp_result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result {
+    text-align: center;
+    font-size: 2rem;
+    color: #df8f8e;
+    margin-top: 1.5rem;
+}
+
+.option_image img {
+    width: 70px;
+}
+
+.option_images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+    margin-top: 3.5rem;
+    
+}
+
+.option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.container.start .option_image {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.option_image:hover {
+    opacity: 1;
+}
+
+.option_image.active {
+    opacity: 1;
+}
+
+.option_image img {
+    pointer-events: none;
+}
+
+.option_image p {
+    margin-top: 1rem;
+    font-size: 1.235rem;
+    color: #df8f8e;
+    pointer-events: none;
+}
+
