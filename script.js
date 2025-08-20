@@ -56,7 +56,7 @@ function resetGame() {
         
 
         result.textContent = "Let\'s play!";
-        userResult.src = compResult.src = "images/Rockimage.png";
+        userResult.src = compResult.src = "Rockimage.png";
         
         optionImages.forEach(image => {
             image.style.pointerEvents = 'auto';
@@ -69,7 +69,7 @@ optionImages.forEach((image, index) => {
     image.addEventListener('click', (e) => {
         image.classList.add('active');
 
-        userResult.src = compResult.src = "images/Rockimage.png";
+        userResult.src = compResult.src = "Rockimage.png";
         
         let waitingMessages = ["3... 2... 1...!", "Thinking...", "AI calculating...", "Waiting for opponent..."];
         result.textContent = waitingMessages[Math.floor(Math.random() * waitingMessages.length)];
@@ -87,7 +87,7 @@ optionImages.forEach((image, index) => {
         let imageSrc = e.target.querySelector('img').src;
         userResult.src = imageSrc;
 
-let compImages = ["images/Rockimage.png", "images/Paperimage.png", "images/Scissorsimage.png"];
+let compImages = ["Rockimage.png", "Paperimage.png", "Scissorsimage.png"];
 let compOptions = ["rock", "paper", "scissors"];
 let userValue = compOptions[index];
 
@@ -107,7 +107,7 @@ if (compValue === userValue) {
 
         /*let randomNumber = Math.floor(Math.random() * 3);
 
-        let compImages = ["images/Rockimage.png", "images/Paperimage.png", "images/Scissorsimage.png"];
+        let compImages = ["Rockimage.png", "Paperimage.png", "Scissorsimage.png"];
         compResult.src = compImages[randomNumber];
 
         let compValue = ["rock", "paper", "scissors"][randomNumber];
